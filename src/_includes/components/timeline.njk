@@ -1,0 +1,47 @@
+---
+# _includes/components/timeline.njk
+---
+<section id="updates" class="py-20 bg-gradient-to-r from-base-200/50 to-base-300/50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold gradient-text mb-4">{{ timeline.title }}</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-orange-400 to-red-500 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="timeline timeline-vertical">
+                {% for item in timeline.items %}
+                <div class="timeline-item">
+                    {% if not loop.first %}<hr class="bg-{{ item.color }}" />{% endif %}
+                    
+                    {% if loop.index % 2 == 1 %}
+                    <div class="timeline-start timeline-box bg-gradient-to-br from-{{ item.color }}-500 to-{{ item.color }}-600 text-white shadow-2xl border-0">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="font-bold text-xl">{{ item.title }}</h3>
+                            <div class="text-sm opacity-80 font-medium">{{ item.date }}</div>
+                        </div>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    <div class="timeline-middle">
+                        <div class="w-6 h-6 bg-{{ item.color }} rounded-full shadow-lg"></div>
+                    </div>
+                    {% else %}
+                    <div class="timeline-middle">
+                        <div class="w-6 h-6 bg-{{ item.color }} rounded-full shadow-lg"></div>
+                    </div>
+                    <div class="timeline-end timeline-box bg-gradient-to-br from-{{ item.color }}-500 to-{{ item.color }}-600 text-white shadow-2xl border-0">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="font-bold text-xl">{{ item.title }}</h3>
+                            <div class="text-sm opacity-80 font-medium">{{ item.date }}</div>
+                        </div>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    {% endif %}
+                    
+                    {% if not loop.last %}<hr class="bg-{{ timeline.items[loop.index].color }}" />{% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

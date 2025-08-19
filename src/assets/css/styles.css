@@ -1,0 +1,132 @@
+/* src/css/styles.css */
+
+/* Additional custom styles that complement DaisyUI */
+:root {
+  --orange-gradient: linear-gradient(135deg, #f97316, #dc2626);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+  to { box-shadow: 0 0 30px rgba(249, 115, 22, 0.6); }
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 2s ease-in-out infinite;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="cupcake"] .glass-effect {
+  background: rgba(251, 242, 255, 0.9);
+  border: 1px solid rgba(251, 242, 255, 0.2);
+}
+
+[data-theme="autumn"] .glass-effect {
+  background: rgba(255, 251, 235, 0.9);
+  border: 1px solid rgba(255, 251, 235, 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: var(--orange-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced timeline styles */
+.timeline-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Button enhancements */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.input:focus,
+.link:focus {
+  outline: 2px solid hsl(var(--p));
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .theme-switcher,
+  .btn,
+  .dropdown {
+    display: none !important;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "start": "concurrently \"npm run dev:*\"",
+    "dev:11ty": "npx @11ty/eleventy --serve --port=8080",
+    "dev:tw": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/tailwind.css --watch",
+    "build": "npx @11ty/eleventy && npx tailwindcss -i src/assets/css/tailwind.css -c tailwind.config.js -o _site/assets/css/tailwind.css"
+  },
+  "name": "us2eu.com",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "concurrently": "^9.2.0",
+    "daisyui": "^5.0.50",
+    "markdown-it-anchor": "^9.2.0",
+    "tailwindcss": "^4.1.12"
+  }
+}

@@ -1,0 +1,45 @@
+---
+# _includes/navbar.njk
+---
+<div class="navbar glass-effect sticky top-0 z-50 shadow-2xl">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle lg:hidden">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl">
+                {% for item in navigation.main %}
+                <li><a href="{{ item.url }}" class="text-base font-medium{% if page.url == item.url %} active{% endif %}">{{ item.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="flex items-center space-x-4 ml-2">
+            <div class="avatar">
+                <div class="w-12 rounded-xl bg-gradient-to-br from-orange-400 to-red-500 shadow-lg animate-glow flex items-center justify-center text-white text-xl">
+                    ✈️
+                </div>
+            </div>
+            <div>
+                <div class="text-xl font-bold gradient-text">
+                    <a href="/">{{ site.name }}</a>
+                </div>
+                <div class="text-sm text-base-content/70 font-medium">{{ site.tagline }}</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 gap-2">
+            {% for item in navigation.main %}
+            <li>
+                <a href="{{ item.url }}" 
+                   class="btn btn-ghost btn-sm font-medium hover:btn-primary transition-all duration-300{% if loop.last %} btn-primary{% endif %}{% if page.url == item.url %} btn-active{% endif %}">
+                    {{ item.text }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
