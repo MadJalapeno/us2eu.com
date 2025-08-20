@@ -1,11 +1,14 @@
 
 <section class="hero min-h-[80vh] relative overflow-hidden">
-    <div class="hero-overlay bg-gradient-to-br from-orange-500/10 to-red-500/10"></div>
+    <div class="hero-overlay bg-gradient-to-b from-white to-bleu-50"></div>
     <div class="hero-content text-center max-w-6xl relative z-10">
         <div class="max-w-4xl">
             <div class="avatar mb-8 animate-float">
-                <div class="w-40 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 shadow-2xl flex items-center justify-center text-7xl animate-glow">
-                    {{ hero.avatar or "👫" }}
+                <div class="w-50">
+                    <div class="mask mask-hexagon w-50 border-2">
+                        <img src="{{ hero.avatar }}" alt=""/>
+                    </div>
+                   
                 </div>
             </div>
             <h1 class="text-6xl lg:text-7xl font-bold mb-8 leading-tight">

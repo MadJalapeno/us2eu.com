@@ -7,6 +7,50 @@ https://daisyui.com/theme-generator/
 https://dequeuniversity.com/rules/axe/4.10/color-contrast
 */
 
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+}
+
+@theme {
+  --color-bleu-100: oklch(0.2968 0.205674 264.052);
+  --color-bleu-90: oklch(0.2968 0.205674 264.052 / 90%);
+  --color-bleu-80: oklch(0.2968 0.205674 264.052 / 80%);
+  --color-bleu-70: oklch(0.2968 0.205674 264.052 / 70%);
+  --color-bleu-60: oklch(0.2968 0.205674 264.052 / 60%);
+  --color-bleu-50: oklch(0.2968 0.205674 264.052 / 50%);
+  --color-bleu-40: oklch(0.2968 0.205674 264.052 / 40%);
+  --color-bleu-30: oklch(0.2968 0.205674 264.052 / 30%);
+  --color-bleu-20: oklch(0.2968 0.205674 264.052 / 20%);
+  --color-bleu-10: oklch(0.2968 0.205674 264.052 / 10%);
+  --color-bleu-05: oklch(0.2968 0.205674 264.052 / 05%);
+
+
+  --color-rouge-100: oklch(0.5718 0.233764 28.0921);
+  --color-rouge-90: oklch(0.5718 0.233764 28.0921 / 90%);
+  --color-rouge-80: oklch(0.5718 0.233764 28.0921 / 80%);
+  --color-rouge-70: oklch(0.5718 0.233764 28.0921 / 70%);
+  --color-rouge-60: oklch(0.5718 0.233764 28.0921 / 60%);
+  --color-rouge-50: oklch(0.5718 0.233764 28.0921 / 50%);
+  --color-rouge-40: oklch(0.5718 0.233764 28.0921 / 40%);
+  --color-rouge-30: oklch(0.5718 0.233764 28.0921 / 30%);
+  --color-rouge-20: oklch(0.5718 0.233764 28.0921 / 20%);
+  --color-rouge-10: oklch(0.5718 0.233764 28.0921 / 10%);
+  --color-rouge-05: oklch(0.5718 0.233764 28.0921 / 05%);
+
+
+}
+
+
 /* Increase font size everywhere */
 html {
   font-size: 16px;
