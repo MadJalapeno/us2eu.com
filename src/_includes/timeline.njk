@@ -17,10 +17,10 @@
                     {% if loop.index % 2 == 1 %}
                     <div class="timeline-start timeline-box bg-gradient-to-br from-{{ item.color }}-500 to-{{ item.color }}-600 text-white shadow-2xl border-0">
                         <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-xl">{{ item.title }}</h3>
-                            <div class="text-sm opacity-80 font-medium">{{ item.date }}</div>
+                            <h3 class="font-bold text-xl text-base-content">{{ item.title }}</h3>
+                            <div class="text-sm opacity-80 font-medium text-base-content">{{ item.date }}</div>
                         </div>
-                        <p>{{ item.description }}</p>
+                        <p class="text-base-content">{{ item.description }}</p>
                     </div>
                     <div class="timeline-middle">
                         <div class="w-6 h-6 bg-{{ item.color }} rounded-full shadow-lg"></div>
@@ -31,10 +31,10 @@
                     </div>
                     <div class="timeline-end timeline-box bg-gradient-to-br from-{{ item.color }}-500 to-{{ item.color }}-600 text-white shadow-2xl border-0">
                         <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-xl">{{ item.title }}</h3>
-                            <div class="text-sm opacity-80 font-medium">{{ item.date }}</div>
+                            <h3 class="font-bold text-xl text-base-content">{{ item.title }}</h3>
+                            <div class="text-sm opacity-80 font-medium text-base-content">{{ item.date }}</div>
                         </div>
-                        <p>{{ item.description }}</p>
+                        <p class="text-base-content">{{ item.description }}</p>
                     </div>
                     {% endif %}
                     
