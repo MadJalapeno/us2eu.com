@@ -1,76 +1,30 @@
+
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moving from USA to Europe - </title>
+    <title>Moving from USA to Europe - Our European Adventure - Moving from USA to Europe</title>
+
     <meta name="description" content="Follow our personal journey moving from the USA to Europe. Real experiences, honest mistakes, research we wish we&#39;d found earlier, and everything we&#39;re learning along the way.">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta property="og:title" content="Moving from USA to Europe - ">
+    <meta name="keywords" content="moving to Europe, American expat journey, personal relocation story, Europe move blog, expat life">
+    <meta name="author" content="Mike">
+    <meta property="og:title" content="Moving from USA to Europe - Our European Adventure - Moving from USA to Europe">
     <meta property="og:description" content="Follow our personal journey moving from the USA to Europe. Real experiences, honest mistakes, research we wish we&#39;d found earlier, and everything we&#39;re learning along the way.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
+    <meta property="og:url" content="https://us2eu.com/">
     
-    <link rel="canonical" href="/">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    
-    ---
-# _includes/head-scripts.njk
----
 
-<style>
-    .glass-effect {
-        backdrop-filter: blur(16px);
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-    .animate-glow {
-        animation: glow 2s ease-in-out infinite alternate;
-    }
-    @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
-    }
-    @keyframes glow {
-        from { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
-        to { box-shadow: 0 0 30px rgba(249, 115, 22, 0.6); }
-    }
-    .gradient-text {
-        background: linear-gradient(135deg, #f97316, #dc2626);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-</style>
+    <link rel="canonical" href="https://us2eu.com/">
     
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     
-    
-    <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Our European Adventure - Moving from USA to Europe",
-  "description": "Personal journey and research documentation for Americans moving to Europe",
-  "url": "https://yoursite.com",
-  "author": {
-    "@type": "Person",
-    "name": "Sarah & Mike"
-  }
-}
-    </script>
     
 </head>
-<body class="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 min-h-screen">
-    ---
-# _includes/navbar.njk
----
+
+<body class="min-h-screen">
+
 <div class="navbar glass-effect sticky top-0 z-50 shadow-2xl">
     <div class="navbar-start">
         <div class="dropdown">
@@ -80,6 +34,14 @@
                 </svg>
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl">
+                
+                <li><a href="#story" class="text-base font-medium">Our Story</a></li>
+                
+                <li><a href="#research" class="text-base font-medium">Research</a></li>
+                
+                <li><a href="#updates" class="text-base font-medium">Updates</a></li>
+                
+                <li><a href="#contact" class="text-base font-medium">Say Hi</a></li>
                 
             </ul>
         </div>
@@ -91,9 +53,9 @@
             </div>
             <div>
                 <div class="text-xl font-bold gradient-text">
-                    <a href="/"></a>
+                    <a href="/">Our European Dreams</a>
                 </div>
-                <div class="text-sm text-base-content/70 font-medium"></div>
+                <div class="text-sm text-base-content/70 font-medium">Moving to Europe</div>
             </div>
         </div>
     </div>
@@ -101,15 +63,40 @@
     <div class="navbar-end hidden lg:flex">
         <ul class="menu menu-horizontal px-1 gap-2">
             
+            <li>
+                <a href="#story" class="btn btn-ghost btn-sm font-medium hover:btn-primary transition-all duration-300">
+                    Our Story
+                </a>
+            </li>
+            
+            <li>
+                <a href="#research" class="btn btn-ghost btn-sm font-medium hover:btn-primary transition-all duration-300">
+                    Research
+                </a>
+            </li>
+            
+            <li>
+                <a href="#updates" class="btn btn-ghost btn-sm font-medium hover:btn-primary transition-all duration-300">
+                    Updates
+                </a>
+            </li>
+            
+            <li>
+                <a href="#contact" class="btn btn-ghost btn-sm font-medium hover:btn-primary transition-all duration-300 btn-primary">
+                    Say Hi
+                </a>
+            </li>
+            
         </ul>
     </div>
 </div>
-    
-    <main>
-        
----
-# _includes/components/hero.njk
----
+
+
+
+<main>
+
+
+
 <section class="hero min-h-[80vh] relative overflow-hidden">
     <div class="hero-overlay bg-gradient-to-br from-orange-500/10 to-red-500/10"></div>
     <div class="hero-content text-center max-w-6xl relative z-10">
@@ -120,7 +107,7 @@
                 </div>
             </div>
             <h1 class="text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-                Hey! We're moving to <span class='gradient-text'>Europe</span> 🇪🇺
+                Hey! We're moving to <span class="gradient-text">Europe</span> 🇪🇺
             </h1>
             <p class="text-2xl lg:text-3xl max-w-4xl mb-12 leading-relaxed text-base-content/80 font-light">
                 After years of dreaming about it, we finally decided to take the leap. We&#39;re documenting everything – the good, the bad, the bureaucracy, and all the research we&#39;re doing along the way.
@@ -138,58 +125,48 @@
             </div>
         </div>
     </div>
-    <!-- Floating Elements -->
-    
-    
-    <div class="absolute top-20 left-10 text-6xl opacity-20 animate-float" style="animation-delay: -2s;">🌍</div>
-    
-    <div class="absolute bottom-20 right-10 text-5xl opacity-20 animate-float" style="animation-delay: -4s;">✈️</div>
-    
-    <div class="absolute top-1/2 left-5 text-4xl opacity-20 animate-float" style="animation-delay: -1s;">🏰</div>
-    
-    
 </section>
----
-# _includes/components/hero.njk
----
-<section class="hero min-h-[80vh] relative overflow-hidden">
-    <div class="hero-overlay bg-gradient-to-br from-orange-500/10 to-red-500/10"></div>
-    <div class="hero-content text-center max-w-6xl relative z-10">
-        <div class="max-w-4xl">
-            <div class="avatar mb-8 animate-float">
-                <div class="w-40 rounded-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 shadow-2xl flex items-center justify-center text-7xl animate-glow">
-                    👫
+<!--
+# _includes/components/status-card.njk
+-->
+<section class="py-20 relative">
+    <div class="container mx-auto px-6">
+        <div class="card bg-base-100/90 backdrop-blur-sm shadow-2xl max-w-5xl mx-auto border border-orange-200/50">
+            <div class="card-body p-8 lg:p-12">
+                <div class="flex items-center justify-center mb-8">
+                    <h2 class="text-4xl font-bold gradient-text mr-4">Where we are right now</h2>
+                    <div class="text-4xl animate-bounce">📍</div>
                 </div>
-            </div>
-            <h1 class="text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-                Hey! We're moving to <span class='gradient-text'>Europe</span> 🇪🇺
-            </h1>
-            <p class="text-2xl lg:text-3xl max-w-4xl mb-12 leading-relaxed text-base-content/80 font-light">
-                After years of dreaming about it, we finally decided to take the leap. We&#39;re documenting everything – the good, the bad, the bureaucracy, and all the research we&#39;re doing along the way.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                
-                <button class="btn btn-primary btn-lg text-lg px-10 shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 animate-pulse">
-                    Follow Our Journey
-                </button>
-                
-                <button class="btn btn-outline btn-lg text-lg px-10 hover:btn-secondary transition-all duration-300">
-                    Browse Our Research
-                </button>
-                
+                <div class="stats stats-vertical lg:stats-horizontal shadow-lg bg-gradient-to-r from-orange-50 to-red-50">
+                    
+                    <div class="stat place-items-center">
+                        <div class="stat-title text-lg font-semibold">Current Location</div>
+                        <div class="stat-value text-2xl text-primary">Austin, Texas</div>
+                        <div class="stat-desc text-lg">🤠 Home sweet home</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                        <div class="stat-title text-lg font-semibold">Target Destination</div>
+                        <div class="stat-value text-2xl text-secondary">Still deciding!</div>
+                        <div class="stat-desc text-lg">🇳🇱 Netherlands or 🇵🇹 Portugal</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                        <div class="stat-title text-lg font-semibold">Timeline</div>
+                        <div class="stat-value text-2xl text-accent">Late 2025</div>
+                        <div class="stat-desc text-lg">🗓️ Fingers crossed!</div>
+                    </div>
+                    
+                    <div class="stat place-items-center">
+                        <div class="stat-title text-lg font-semibold">Current Phase</div>
+                        <div class="stat-value text-2xl text-info">Research</div>
+                        <div class="stat-desc text-lg">📚 Deep dive mode</div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>
-    <!-- Floating Elements -->
-    
-    
-    <div class="absolute top-20 left-10 text-6xl opacity-20 animate-float" style="animation-delay: -2s;">🌍</div>
-    
-    <div class="absolute bottom-20 right-10 text-5xl opacity-20 animate-float" style="animation-delay: -4s;">✈️</div>
-    
-    <div class="absolute top-1/2 left-5 text-4xl opacity-20 animate-float" style="animation-delay: -1s;">🏰</div>
-    
-    
 </section>
 
 <!-- Story Section -->
@@ -245,99 +222,13 @@
                 </div>
             </div>
         </div>
-    </div
-    </main>
-    
-    ---
-# _includes/components/timeline.njk
----
-<section id="updates" class="py-20 bg-gradient-to-r from-base-200/50 to-base-300/50">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-bold gradient-text mb-4">Recent updates from our journey</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-orange-400 to-red-500 mx-auto rounded-full"></div>
-        </div>
-        
-        <div class="max-w-4xl mx-auto">
-            <div class="timeline timeline-vertical">
-                
-                <div class="timeline-item">
-                    
-                    
-                    
-                    <div class="timeline-start timeline-box bg-gradient-to-br from-success-500 to-success-600 text-white shadow-2xl border-0">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-xl">We picked our top 3 countries! 🎉</h3>
-                            <div class="text-sm opacity-80 font-medium">March 15</div>
-                        </div>
-                        <p>After months of research, we&#39;ve narrowed it down to Netherlands, Portugal, and Germany. Each has different pros/cons and visa paths.</p>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="w-6 h-6 bg-success rounded-full shadow-lg"></div>
-                    </div>
-                    
-                    
-                    <hr class="bg-warning" />
-                </div>
-                
-                <div class="timeline-item">
-                    <hr class="bg-warning" />
-                    
-                    
-                    <div class="timeline-middle">
-                        <div class="w-6 h-6 bg-warning rounded-full shadow-lg"></div>
-                    </div>
-                    <div class="timeline-end timeline-box bg-gradient-to-br from-warning-500 to-warning-600 text-white shadow-2xl border-0">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-xl">First language lessons started 📚</h3>
-                            <div class="text-sm opacity-80 font-medium">March 8</div>
-                        </div>
-                        <p>Started Dutch and Portuguese lessons on Duolingo. Mike is way better at Dutch, I&#39;m picking up Portuguese faster.</p>
-                    </div>
-                    
-                    
-                    <hr class="bg-error" />
-                </div>
-                
-                <div class="timeline-item">
-                    <hr class="bg-error" />
-                    
-                    
-                    <div class="timeline-start timeline-box bg-gradient-to-br from-error-500 to-error-600 text-white shadow-2xl border-0">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="font-bold text-xl">Had our first &quot;oh crap&quot; moment 😅</h3>
-                            <div class="text-sm opacity-80 font-medium">Feb 28</div>
-                        </div>
-                        <p>Realized we need to think about taxes way earlier than we thought. US citizens still file US taxes living abroad!</p>
-                    </div>
-                    <div class="timeline-middle">
-                        <div class="w-6 h-6 bg-error rounded-full shadow-lg"></div>
-                    </div>
-                    
-                    
-                    
-                </div>
-                
-            </div>
-        </div>
     </div>
-</section>
-    
-    ---
-# _includes/theme-switcher.njk
----
-<div class="fixed bottom-6 right-6 z-50">
-    <div class="dropdown dropdown-top dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-circle btn-lg btn-primary shadow-2xl animate-pulse">
-            🎨
-        </div>
-        <ul tabindex="0" class="dropdown-content z-[1] p-4 shadow-2xl bg-base-100 rounded-box w-60 border border-base-300">
-            
-        </ul>
-    </div>
-</div>
+    </section>
 
-    
-    
+</main>
+
+
+
 </body>
+
 </html>

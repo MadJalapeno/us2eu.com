@@ -1,3 +1,25 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography"; /* https://github.com/tailwindlabs/tailwindcss-typography */
+@plugin "daisyui"{}
 
+/* 
+https://daisyui.com/theme-generator/
+https://dequeuniversity.com/rules/axe/4.10/color-contrast
+*/
+
+/* Increase font size everywhere */
+html {
+  font-size: 16px;
+  scroll-behaviour: smooth;
+}
+
+/* Custom CSS */
+
+@layer base {
+  @theme {
+    --font-sans: InterVariable, sans-serif; /* https://tailwindui.com/documentation#add-the-inter-font-family */
+  }
+
+/* custom elements from here */
+
+}

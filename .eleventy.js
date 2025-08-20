@@ -1,63 +1,104 @@
-// .eleventy.js
-module.exports = function(eleventyConfig) {
-  // Copy static assets
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/images");
-  eleventyConfig.addPassthroughCopy("src/admin");
+const now = String(Date.now())
+
+// Image transform plugin
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
+// add id to headings
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+
+// Time to read plugin
+const timeToRead = require('eleventy-plugin-time-to-read');
+
+
+
+// CSV parser
+const { parse } = require('csv-parse');
+
+require('dotenv').config();
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.setInputDirectory("src");
+  eleventyConfig.setIncludesDirectory("_includes");
+  eleventyConfig.setLayoutsDirectory("_layouts");
+
+  eleventyConfig.addPassthroughCopy("src/assets/images");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
+  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
   
-  // Watch CSS files for changes
-  eleventyConfig.addWatchTarget("src/css/");
+  eleventyConfig.addWatchTarget("src");
+
+  // read data from .env file to determine dev or prod
+  eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV);
+
   
-  // Filters
-  eleventyConfig.addFilter("dump", (obj) => {
-    return JSON.stringify(obj, null, 2);
-  });
-  
-  eleventyConfig.addFilter("map", (array, prop) => {
-    return array.map(item => item[prop]);
-  });
-  
-  eleventyConfig.addFilter("join", (array, separator = ", ") => {
-    return array.join(separator);
+
+  // Plug Ins
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin,{
+    formats: ["avif", "webp", "jpeg"],
+
   });
 
-  // Collections
-  eleventyConfig.addCollection("research", function(collection) {
-    return collection.getFilteredByGlob("src/research/*.md");
-  });
-  
-  eleventyConfig.addCollection("blog", function(collection) {
-    return collection.getFilteredByGlob("src/blog/*.md");
-  });
 
-  // Shortcodes for reusable components
-  eleventyConfig.addShortcode("hero", function(data) {
-    return `{% set hero = ${JSON.stringify(data)} %}{% include "components/hero.njk" %}`;
-  });
-  
-  eleventyConfig.addShortcode("statusCard", function(data) {
-    return `{% set status = ${JSON.stringify(data)} %}{% include "components/status-card.njk" %}`;
-  });
-  
-  // Date formatting
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    return new Intl.DateTimeFormat("en-US", {
-      year: "numeric",
-      month: "long", 
-      day: "numeric"
-    }).format(dateObj);
-  });
 
-  return {
-    dir: {
-      input: "src",
-      includes: "_includes",
-      data: "_data",
-      output: "_site"
-    },
-    templateFormats: ["md", "njk", "html"],
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+  eleventyConfig.addPlugin(timeToRead);
+
+  // Markdown Overrides for adding id to headings
+  const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
+    class: "anchor",
+    symbol: "<span hidden>#</span>",
+    style: "aria-labelledby",
+  });
+  const markdownItAnchorOptions = {
+    level: [1, 2, 3],
+    tabIndex: false
   };
+  
+  let markdownLibrary = markdownIt({
+    html: true,
+  }).use(markdownItAnchor, markdownItAnchorOptions);
+  
+  eleventyConfig.setLibrary("md", markdownLibrary);
+
+  // Shortcodes
+  eleventyConfig.addShortcode('version', function () {
+    return now
+  });
+  eleventyConfig.addShortcode('year', function () {
+    return new Date().getFullYear()
+  });
+
+  eleventyConfig.addFilter("ucfirst", function(value) {
+    return String(value).charAt(0).toUpperCase() + String(value).slice(1);
+  });
+
+  // Custom Split Filter
+  eleventyConfig.addFilter("split", function(value, delimiter) {
+    if (typeof value === "string") {
+      return value.split(delimiter);
+    }
+    return value;
+  });
+
+  // Custom filter to split Patent Number data
+  eleventyConfig.addFilter("splitPatentNumber", function(value) {
+    const match = value.match(/\[(.*?)\]\((.*?)\)/);
+    if (match) {
+      return {
+        text: match[1],
+        url: match[2]
+      };
+    }
+    return {
+      text: value,
+      url: "#"
+    };
+  });
+
+
+};
+
+module.exports.config = {
+  htmlTemplateEngine: "njk",
+  markdownTemplateEngine: "njk"
 };

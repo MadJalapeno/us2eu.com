@@ -1,8 +1,8 @@
 ---
-# index.njk
-layout: layouts/base.njk
+layout: base.njk
 title: "Moving from USA to Europe"
 description: "Follow our personal journey moving from the USA to Europe. Real experiences, honest mistakes, research we wish we'd found earlier, and everything we're learning along the way."
+
 hero:
   title: "Hey! We're moving to <span class='gradient-text'>Europe</span> 🇪🇺"
   subtitle: "After years of dreaming about it, we finally decided to take the leap. We're documenting everything – the good, the bad, the bureaucracy, and all the research we're doing along the way."
@@ -14,19 +14,6 @@ hero:
     - text: "Browse Our Research" 
       class: "btn-outline"
       extraClass: "hover:btn-secondary transition-all duration-300"
-  floatingElements:
-    - emoji: "🌍"
-      position: "top-20 left-10"
-      size: "6xl"
-      delay: "-2s"
-    - emoji: "✈️"
-      position: "bottom-20 right-10" 
-      size: "5xl"
-      delay: "-4s"
-    - emoji: "🏰"
-      position: "top-1/2 left-5"
-      size: "4xl"
-      delay: "-1s"
 
 status:
   title: "Where we are right now"
@@ -48,80 +35,10 @@ status:
       value: "Research"
       color: "info"
       description: "📚 Deep dive mode"
-
-research:
-  title: "What we've learned so far"
-  subtitle: "Sharing all our research because we wish we'd found something like this when we started"
-  items:
-    - title: "Visa Options Deep Dive"
-      icon: "📋"
-      color: "blue"
-      lastUpdated: "Last updated 3 days ago"
-      status:
-        type: "success"
-        text: "Complete"
-      description: "We mapped out every possible visa route for 12 different European countries. Turns out there are way more options than we thought, but also way more complexity..."
-      badges:
-        - "📊 15 pages of notes"
-        - "🕒 40 hours research"
-      link: "/research/visas/"
-      buttonText: "Read findings"
-    - title: "Real Cost Breakdown"
-      icon: "💰"
-      color: "green"
-      lastUpdated: "Updated weekly"
-      status:
-        type: "warning"
-        text: "Ongoing"
-      description: "We're tracking every single cost - from visa fees to moving expenses to cost of living comparisons. Some surprises: it's cheaper than we thought in some places, way more expensive in others."
-      badges:
-        - "📈 8 cities compared"
-        - "💸 Cost estimates"
-      link: "/research/costs/"
-      buttonText: "See numbers"
-    - title: "Housing Reality Check"
-      icon: "🏠"
-      color: "purple"
-      lastUpdated: "Work in progress"
-      status:
-        type: "info"
-        text: "Research Phase"
-      description: "Turns out finding an apartment as foreigners is... complicated. We're documenting all the rental websites, requirements, and tricks we're learning from people who've done it."
-      badges:
-        - "🔍 50+ sites reviewed"
-        - "📞 12 interviews"
-      link: "/research/housing/"
-      buttonText: "Current progress"
-
-timeline:
-  title: "Recent updates from our journey"
-  items:
-    - title: "We picked our top 3 countries! 🎉"
-      date: "March 15"
-      color: "success"
-      description: "After months of research, we've narrowed it down to Netherlands, Portugal, and Germany. Each has different pros/cons and visa paths."
-    - title: "First language lessons started 📚"
-      date: "March 8" 
-      color: "warning"
-      description: "Started Dutch and Portuguese lessons on Duolingo. Mike is way better at Dutch, I'm picking up Portuguese faster."
-    - title: 'Had our first "oh crap" moment 😅'
-      date: "Feb 28"
-      color: "error"
-      description: "Realized we need to think about taxes way earlier than we thought. US citizens still file US taxes living abroad!"
-
-schema:
-  "@context": "https://schema.org"
-  "@type": "Blog"
-  "name": "Our European Adventure - Moving from USA to Europe"
-  "description": "Personal journey and research documentation for Americans moving to Europe"
-  "url": "https://yoursite.com"
-  "author":
-    "@type": "Person"
-    "name": "Sarah & Mike"
 ---
 
-{% include "components/hero.njk" %}
-{% include "components/status-card.njk" %}
+{% include "hero.njk" %}
+{% include "status-card.njk" %}
 
 <!-- Story Section -->
 <section id="story" class="py-20 bg-gradient-to-r from-base-200/50 to-base-300/50">
@@ -176,4 +93,5 @@ schema:
                 </div>
             </div>
         </div>
-    </div
+    </div>
+    </section>
