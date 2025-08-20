@@ -1,0 +1,47 @@
+<!--
+# _includes/components/research-grid.njk
+-->
+
+<section id="research" class="py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold gradient-text mb-4">{{ research.title }}</h2>
+            <p class="text-2xl text-base-content/70 font-light">{{ research.subtitle }}</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-orange-400 to-red-500 mx-auto rounded-full mt-6"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto space-y-8">
+            {% for item in research.items %}
+            <div class="card bg-base-100 shadow-2xl hover:shadow-{{ item.color }}-500/25 transition-all duration-300 border border-{{ item.color }}-200/50">
+                <div class="card-body p-8">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex items-center space-x-6">
+                            <div class="avatar">
+                                <div class="w-16 rounded-2xl bg-gradient-to-br from-{{ item.color }}-400 to-{{ item.color }}-600 shadow-lg flex items-center justify-center text-3xl text-white">
+                                    {{ item.icon }}
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-3xl font-bold text-{{ item.color }}-600">{{ item.title }}</h3>
+                                <div class="text-base text-base-content/60 font-medium">{{ item.lastUpdated }}</div>
+                            </div>
+                        </div>
+                        <div class="badge badge-{{ item.status.type }} badge-lg text-base font-semibold px-4 py-3">{{ item.status.text }}</div>
+                    </div>
+                    <p class="text-xl mb-6 leading-relaxed">
+                        {{ item.description }}
+                    </p>
+                    <div class="card-actions justify-between items-center">
+                        <div class="flex gap-3">
+                            {% for badge in item.badges %}
+                            <div class="badge badge-outline badge-lg">{{ badge }}</div>
+                            {% endfor %}
+                        </div>
+                        <a href="{{ item.link }}" class="btn btn-{{ item.color }} btn-lg shadow-lg">{{ item.buttonText }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

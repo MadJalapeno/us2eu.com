@@ -1,6 +1,9 @@
+{# content is pulled from the frontmatter of index.njk #}
+
 <!--
 # _includes/components/status-card.njk
 -->
+
 <section class="py-20 relative">
     <div class="container mx-auto px-6">
         <div class="card bg-base-100/90 backdrop-blur-sm shadow-2xl max-w-5xl mx-auto border border-orange-200/50">
@@ -9,7 +12,7 @@
                     <h2 class="text-4xl font-bold gradient-text mr-4">{{ status.title }}</h2>
                     <div class="text-4xl animate-bounce">{{ status.icon }}</div>
                 </div>
-                <div class="stats stats-vertical lg:stats-horizontal shadow-lg bg-gradient-to-r from-orange-50 to-red-50">
+                <div class="stats stats-vertical lg:stats-horizontal shadow-lg bg-gradient-to-r from-orange-500 to-red-500">
                     {% for stat in status.stats %}
                     <div class="stat place-items-center">
                         <div class="stat-title text-lg font-semibold">{{ stat.title }}</div>

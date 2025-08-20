@@ -5,7 +5,7 @@ description: "Follow our personal journey moving from the USA to Europe. Real ex
 
 hero:
   title: "Hey! We're moving to <span class='gradient-text'>Europe</span> 🇪🇺"
-  subtitle: "After years of dreaming about it, we finally decided to take the leap. We're documenting everything – the good, the bad, the bureaucracy, and all the research we're doing along the way."
+  subtitle: "After years of just thinking about it, we finally decided to take the next stage. We're documenting everything - the good, the bad, the bureaucracy, and all the research we're doing along the way."
   avatar: "👫"
   buttons:
     - text: "Follow Our Journey"
@@ -20,78 +20,98 @@ status:
   icon: "📍"
   stats:
     - title: "Current Location"
-      value: "Austin, Texas"
+      value: "Exeter, NH"
       color: "primary"
       description: "🤠 Home sweet home"
     - title: "Target Destination"
       value: "Still deciding!"
       color: "secondary"
-      description: "🇳🇱 Netherlands or 🇵🇹 Portugal"
+      description: "🇫🇷 France or 🇵🇹 Portugal"
     - title: "Timeline"
-      value: "Late 2025"
+      value: "Mid 2026"
       color: "accent"
       description: "🗓️ Fingers crossed!"
     - title: "Current Phase"
       value: "Research"
       color: "info"
       description: "📚 Deep dive mode"
+
+research:
+  title: "What we've learned so far"
+  subtitle: "Sharing all our research because we wish we'd found something like this when we started"
+  items:
+    - title: "Visa Options Deep Dive"
+      icon: "📋"
+      color: "blue"
+      lastUpdated: "Last updated 3 days ago"
+      status:
+        type: "success"
+        text: "Complete"
+      description: "We mapped out every possible visa route for 12 different European countries. Turns out there are way more options than we thought, but also way more complexity..."
+      badges:
+        - "📊 15 pages of notes"
+        - "🕒 40 hours research"
+      link: "/research/visas/"
+      buttonText: "Read findings"
+    - title: "Real Cost Breakdown"
+      icon: "💰"
+      color: "green"
+      lastUpdated: "Updated weekly"
+      status:
+        type: "warning"
+        text: "Ongoing"
+      description: "We're tracking every single cost - from visa fees to moving expenses to cost of living comparisons. Some surprises: it's cheaper than we thought in some places, way more expensive in others."
+      badges:
+        - "📈 8 cities compared"
+        - "💸 Cost estimates"
+      link: "/research/costs/"
+      buttonText: "See numbers"
+    - title: "Housing Reality Check"
+      icon: "🏠"
+      color: "purple"
+      lastUpdated: "Work in progress"
+      status:
+        type: "info"
+        text: "Research Phase"
+      description: "Turns out finding an apartment as foreigners is... complicated. We're documenting all the rental websites, requirements, and tricks we're learning from people who've done it."
+      badges:
+        - "🔍 50+ sites reviewed"
+        - "📞 12 interviews"
+      link: "/research/housing/"
+      buttonText: "Current progress"
+
+timeline:
+  title: "Recent updates from our journey"
+  items:
+    - title: "We picked our top 3 countries! 🎉"
+      date: "March 15"
+      color: "success"
+      description: "After months of research, we've narrowed it down to Netherlands, Portugal, and Germany. Each has different pros/cons and visa paths."
+    - title: "First language lessons started 📚"
+      date: "March 8" 
+      color: "warning"
+      description: "Started Dutch and Portuguese lessons on Duolingo. Mike is way better at Dutch, I'm picking up Portuguese faster."
+    - title: 'Had our first "oh shit" moment 😅'
+      date: "Feb 28"
+      color: "error"
+      description: "Realized we need to think about taxes way earlier than we thought. US citizens still file US taxes living abroad!"
+
+schema:
+  "@context": "https://schema.org"
+  "@type": "Blog"
+  "name": "Our European Adventure - Moving from USA to Europe"
+  "description": "Personal journey and research documentation for Americans moving to Europe"
+  "url": "https://yoursite.com"
+  "author":
+    "@type": "Person"
+    "name": "Sarah & Mike"
 ---
 
 {% include "hero.njk" %}
 {% include "status-card.njk" %}
 
-<!-- Story Section -->
-<section id="story" class="py-20 bg-gradient-to-r from-base-200/50 to-base-300/50">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-bold gradient-text mb-4">Why we're doing this</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-orange-400 to-red-500 mx-auto rounded-full"></div>
-        </div>
-        
-        <div class="max-w-6xl mx-auto">
-            <div class="alert alert-warning shadow-2xl mb-12 border-l-8 border-yellow-500">
-                <div class="text-6xl mr-4">💭</div>
-                <div>
-                    <h3 class="font-bold text-2xl mb-2">The Realization</h3>
-                    <span class="text-xl italic font-light">
-                        "We kept saying 'someday we'll move to Europe' and then realized we'd been saying it for like 5 years. So here we are, actually trying to figure out how to make it happen!"
-                    </span>
-                </div>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-10">
-                <div class="card bg-gradient-to-br from-green-50 to-blue-50 shadow-2xl border border-green-200/50 hover:shadow-green-500/25 transition-all duration-300">
-                    <div class="card-body p-8">
-                        <h3 class="card-title text-3xl mb-6">
-                            <span class="text-5xl mr-4">🌍</span>
-                            The Dream
-                        </h3>
-                        <div class="space-y-3 text-lg">
-                            <p class="flex items-center"><span class="text-2xl mr-3">⚖️</span>Better work-life balance</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">🏥</span>Universal healthcare</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">🚶</span>Walkable cities</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">🏛️</span>Rich history and culture</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">✈️</span>Easy European travel</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card bg-gradient-to-br from-yellow-50 to-orange-50 shadow-2xl border border-orange-200/50 hover:shadow-orange-500/25 transition-all duration-300">
-                    <div class="card-body p-8">
-                        <h3 class="card-title text-3xl mb-6">
-                            <span class="text-5xl mr-4">😅</span>
-                            The Reality Check
-                        </h3>
-                        <div class="space-y-3 text-lg">
-                            <p class="flex items-center"><span class="text-2xl mr-3">📋</span>Overwhelming visa paperwork</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">🗣️</span>Language barriers</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">👨‍👩‍👧‍👦</span>Leaving family behind</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">💼</span>Career transitions</p>
-                            <p class="flex items-center"><span class="text-2xl mr-3">🏢</span>SO. MUCH. BUREAUCRACY.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
+{% include "story.njk" %}
+
+{% include "research-grid.njk" %}
+
+{% include "timeline.njk" %}
