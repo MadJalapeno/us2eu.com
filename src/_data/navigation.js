@@ -1,10 +1,10 @@
 // _data/navigation.js  
 module.exports = {
   main: [
-    { text: "Our Story", url: "#story" },
-    { text: "Research", url: "#research" },
-    { text: "Updates", url: "#updates" },
-    { text: "Say Hi", url: "#contact" }
+    { text: "Our Story", url: "/story" },
+    { text: "Research", url: "/research" },
+    { text: "Updates", url: "/updates" },
+    { text: "Say Hi", url: "/contact" }
   ],
   footer: [
     { text: "Privacy", url: "/privacy/" },

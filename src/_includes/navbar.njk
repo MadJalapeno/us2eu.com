@@ -33,7 +33,7 @@
             {% for item in navigation.main %}
             <li>
                 <a href="{{ item.url }}" 
-                   class="btn btn-ghost btn-sm font-medium hover:btn-primary transition-all duration-300{% if loop.last %} btn-primary{% endif %}{% if page.url == item.url %} btn-active{% endif %}">
+                   class="btn btn-ghost btn-md font-normal hover:btn-primary transition-all duration-300{% if loop.last %} btn-primary{% endif %}{% if page.url == item.url %} btn-active{% endif %}">
                     {{ item.text }}
                 </a>
             </li>

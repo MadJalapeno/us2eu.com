@@ -21,9 +21,11 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 {% for button in hero.buttons %}
-                <button class="btn {{ button.class }} btn-lg text-lg px-10 {{ button.extraClass }}">
-                    {{ button.text }}
-                </button>
+                <a href="{{ button.url }}">
+                    <button class="btn {{ button.class }} btn-lg text-lg px-10 {{ button.extraClass }}">
+                        {{ button.text }}
+                    </button>
+                </a>
                 {% endfor %}
             </div>
         </div>

@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+
+{%- for post in collections.research | reverse %}
+
+    {{ post.data.title }}
+
+    {{ post.data.date }}
+
+    {{ post.data.description }}
+
+    <a href="{{ post.url }}">Read More</a>
+
+{%- endfor %}

@@ -28,6 +28,10 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.addWatchTarget("src");
 
+    eleventyConfig.setServerOptions({
+    liveReload: true
+  });
+
   // read data from .env file to determine dev or prod
   eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV);
 
@@ -39,62 +43,13 @@ module.exports = function (eleventyConfig) {
 
   });
 
-
-
   eleventyConfig.addPlugin(timeToRead);
-
-  // Markdown Overrides for adding id to headings
-  const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
-    class: "anchor",
-    symbol: "<span hidden>#</span>",
-    style: "aria-labelledby",
-  });
-  const markdownItAnchorOptions = {
-    level: [1, 2, 3],
-    tabIndex: false
-  };
   
   let markdownLibrary = markdownIt({
     html: true,
-  }).use(markdownItAnchor, markdownItAnchorOptions);
+  });
   
   eleventyConfig.setLibrary("md", markdownLibrary);
-
-  // Shortcodes
-  eleventyConfig.addShortcode('version', function () {
-    return now
-  });
-  eleventyConfig.addShortcode('year', function () {
-    return new Date().getFullYear()
-  });
-
-  eleventyConfig.addFilter("ucfirst", function(value) {
-    return String(value).charAt(0).toUpperCase() + String(value).slice(1);
-  });
-
-  // Custom Split Filter
-  eleventyConfig.addFilter("split", function(value, delimiter) {
-    if (typeof value === "string") {
-      return value.split(delimiter);
-    }
-    return value;
-  });
-
-  // Custom filter to split Patent Number data
-  eleventyConfig.addFilter("splitPatentNumber", function(value) {
-    const match = value.match(/\[(.*?)\]\((.*?)\)/);
-    if (match) {
-      return {
-        text: match[1],
-        url: match[2]
-      };
-    }
-    return {
-      text: value,
-      url: "#"
-    };
-  });
-
 
 };
 
