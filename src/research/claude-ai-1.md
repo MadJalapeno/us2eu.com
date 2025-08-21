@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: pages
 tags: 
     - research
     - claude.ai
