@@ -1,0 +1,33 @@
+<!--
+# _includes/components/updates.njk
+-->
+
+<section id="updates" class="py-20 bg-gradient-to-b from-bleu-50 to-bleu-30">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold gradient-text mb-4">{{ timeline.title }}</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-orange-400 to-red-500 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto space-y-8">
+          {% for item in timeline.items %}
+          <div class="card bg-base-100 shadow-2xl hover:shadow-{{ item.color }} border border-{{ item.color }}">
+              <div class="card-body p-8">
+                <div class="flex">
+                  <div class="bg-gradient-to-br from-{{ item.color }} to-{{ item.color }} text-white shadow-2xl border-0">
+                      <div class="flex items-center justify-between mb-3">
+                          <h3 class="font-bold text-xl text-base-content">{{ item.title }}</h3>
+                          <div class="text-sm opacity-80 font-medium text-base-content">{{ item.date }}</div>
+                      </div>
+                      <p class="text-base-content">{{ item.description }}</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          {% endfor %}
+        <div>
+        <div>
+          <a class="btn btn-{{ item.color }} btn-lg">More</a>
+        </div>
+    </div>
+</section>

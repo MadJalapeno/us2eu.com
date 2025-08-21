@@ -1,6 +1,7 @@
 /node_modules
 /_site
 /.cache
+/.wrangler
 /package-lock.json
 .env
 xxx
