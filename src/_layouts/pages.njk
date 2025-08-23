@@ -4,11 +4,31 @@
 <body class="min-h-screen">
 {% include "navbar.njk" %}
 
-<main>
-    <div class="">
-        {{ content | safe }}
+  <section id="content" class="py-20">
+    <div class="container mx-auto px-6">
+      <div class="mb-16 prose mx-auto">
+{{ content | safe }}
+      </div>
     </div>
-</main>
+  </section>
+
+  <section id="next" class="mx-auto px-6">
+{% if previous %}
+    <a href="{{ previous }}">
+      <button class="btn">
+        Previous 
+      </button>
+    </a>
+{% endif %}
+
+{% if next %}
+    <a href="{{ next }}">
+      <button class="btn">
+        Next 
+      </button>
+    </a>
+{% endif %}
+  </section>
 
 {% include "footer.njk" %}
 

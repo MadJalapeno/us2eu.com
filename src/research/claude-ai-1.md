@@ -5,13 +5,14 @@ tags:
     - claude.ai
     - france
     - portugal
-title: claude.ai conversations
-date: 2025-08-16
+title: claude.ai conversations - Q1
+date: 2025-08-16 00:00:01
 description: talking
+next: /research/claude-ai-2
+previous: 
 ---
 
-Moving to France from New Hampshire - Conversation
-#greatescape #france #portugal 
+# Moving to France from New Hampshire - Conversation
   
 ## **User Question 1:**
 
