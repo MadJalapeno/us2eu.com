@@ -16,6 +16,8 @@ layout: base.njk
             <p>{{ post.content | excerpt }}</p>
           </div>
 
+          {{ post.content | readingTime }} minute read
+
           <div class="flex items-center justify-between mt-4 gap-4 px-4 pb-4">
 
 {% if post.data.tags %}

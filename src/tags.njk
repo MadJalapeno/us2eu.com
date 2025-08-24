@@ -1,0 +1,85 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagCloud
+permalink: /tags/{{ tag | slug }}/
+eleventyComputed:
+  title: "Posts tagged '{{ tag }}'"
+---
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <div class="mb-8">
+    <a href="/tags/" class="text-blue-600 hover:text-blue-800 text-sm">&larr; All Tags</a>
+    <h1 class="text-3xl font-bold mt-2">Posts tagged "{{ tag }}"</h1>
+    <p class="text-gray-600 mt-2">{{ collections[tag].length }} posts found</p>
+  </div>
+
+  <!-- Posts with this tag -->
+  <div class="space-y-8">
+    {% for post in collections[tag] | reverse %}
+      <article class="border-b border-gray-200 pb-6 last:border-b-0">
+        <h2 class="text-xl font-semibold mb-2">
+          <a href="{{ post.url }}" class="text-gray-900 hover:text-blue-600 transition-colors">
+            {{ post.data.title }}
+          </a>
+        </h2>
+        
+        <div class="text-gray-600 text-sm mb-3">
+          {{ post.date | date: "%B %d, %Y" }}
+        </div>
+        
+        {% if post.content %}
+          <div class="prose prose-gray mb-4">
+            {{ post.content | excerpt }}
+          </div>
+        {% endif %}
+        
+        <!-- Show other tags for this post -->
+        {% if post.data.tags and post.data.tags.length > 1 %}
+          <div class="flex flex-wrap gap-2">
+            {% for postTag in post.data.tags %}
+              {% if postTag != "posts" and postTag != tag %}
+                <a href="/tags/{{ postTag | slug }}/" 
+                   class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded hover:bg-gray-200 transition-colors">
+                  {{ postTag }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+
+  <!-- Related tags -->
+  <div class="mt-12 pt-8 border-t border-gray-200">
+    <h3 class="text-lg font-semibold mb-4">Related Tags</h3>
+    <div class="flex flex-wrap gap-2">
+      {% set relatedTagsSet = [] %}
+      {% for post in collections[tag] %}
+        {% if post.data.tags %}
+          {% for relatedTag in post.data.tags %}
+            {% if relatedTag != "posts" and relatedTag != tag and relatedTag != "" %}
+              {% set relatedTagsSet = relatedTagsSet.concat([relatedTag]) %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      
+      {% set uniqueRelatedTags = relatedTagsSet | unique | sort %}
+      {% for relatedTag in uniqueRelatedTags %}
+        <a href="/tags/{{ relatedTag | slug }}/" 
+           class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full hover:bg-blue-200 transition-colors">
+          {{ relatedTag }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

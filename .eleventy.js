@@ -51,15 +51,9 @@ module.exports = function (eleventyConfig) {
   
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  eleventyConfig.addFilter("excerpt", (post) => {
-    if (post.includes("<!--more-->")) {
-      return post.split("<!--more-->")[0];
-    }
-    // Fallback to word limit
-    const content = post.replace(/(<([^>]+)>)/gi, "");
-    const words = content.trim().split(/\s+/);
-    return words.slice(0, 45).join(" ") + (words.length > 45 ? "..." : "");
-  });
+  // Load modular configurations
+  require('./_config/tagcloud.js')(eleventyConfig);
+  require('./_config/filters.js')(eleventyConfig);
 
 };
 
