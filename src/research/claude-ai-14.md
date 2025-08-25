@@ -18,7 +18,7 @@ previous: /research/claude-ai-13/
 >Please give me some pointers so I can start looking at property in N. Portugal and SW France.
 ### Claude's Response:
 
-I've created a comprehensive property search guide covering both regions. The key insight is that your $800k budget puts you in an excellent position - you can afford substantial properties with land in prime locations without stretching financially.
+I've created a comprehensive property search guide covering both regions. The key insight is that your $🤫 budget puts you in an excellent position - you can afford substantial properties with land in prime locations without stretching financially.
 
 **My Strategic Recommendations:**
 
@@ -34,7 +34,6 @@ I've created a comprehensive property search guide covering both regions. The ke
 
 - Better climate than northern areas
 - More affordable than coastal regions
-- Established naturist culture nearby
 - Still accessible to Montpellier airport
 
 **Practical First Step:** Set up saved searches on [[Idealista.pt]] and [[LeBonCoin.fr]] with your specific criteria. You'll quickly get a feel for what's available and realistic pricing.

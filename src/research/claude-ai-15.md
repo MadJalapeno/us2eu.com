@@ -39,7 +39,7 @@ Removing the gîte from the equation actually simplifies things significantly an
 - **Much wider location options** - you're not limited to rural properties with land
 - **Consider coastal towns** like Viana do Castelo, Póvoa de Varzim, or even Porto suburbs
 - **Apartment living possible** - less maintenance, better urban amenities
-- **Your $800k goes even further** - excellent apartments €200k-400k, houses €300k-500k
+- **Your $🤫 goes even further** - excellent apartments €200k-400k, houses €300k-500k
 - **D7 visa even easier** without business complications
 
 **Best locations now:**
@@ -92,7 +92,7 @@ Removing the gîte from the equation actually simplifies things significantly an
 - **Less isolation** than rural gîte life
 - **Better healthcare access** in cities
 
-**Your $800k could buy:**
+**Your $🤫 could buy:**
 
 - **Luxury Porto apartment** (€300k) + €500k invested for income
 - **Beautiful house in Braga** (€400k) + €400k invested

@@ -53,7 +53,7 @@ The UK could actually be surprisingly viable, especially given your priorities. 
 
 - Property prices vary enormously by region
 - Rural areas much more affordable than you might expect
-- Your $800k could buy excellent properties in Wales, northern England, Scotland
+- Your $🤫 could buy excellent properties in Wales, northern England, Scotland
 - UK tax implications on your 401(k) might be more favorable than Portugal/France
 
 **Potential Drawbacks:**

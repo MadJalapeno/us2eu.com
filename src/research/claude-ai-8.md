@@ -17,7 +17,7 @@ previous: /research/claude-ai-7/
 > We're trying to avoid a mortgage. We would be selling our house worth about 800-900k usd. Would we be able to conntinue paying into our US 401k, or would there be something more sensible/safer/better?
 ### Claude's Response:
 
-With over $800k, you're in an excellent position to buy outright and avoid mortgage complexities! However, the 401(k) situation is more nuanced than you might expect.
+With over $🤫, you're in an excellent position to buy outright and avoid mortgage complexities! However, the 401(k) situation is more nuanced than you might expect.
 
 **The 401(k) Challenge:** Once you become a Portuguese tax resident, you can keep your 401(k) but cannot make new contributions because you're no longer employed in the US. The bigger issue is taxation of withdrawals.
 

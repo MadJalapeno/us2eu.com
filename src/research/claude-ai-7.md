@@ -40,7 +40,6 @@ Here's how I'd approach this systematically:
 
 - Confirm post-Brexit residence requirements for both countries
 - Research business licensing requirements for gîte operations
-- Look into naturist accommodation regulations and zoning laws
 
 **Phase 2: Location Scouting (6-12 months out)**
 
