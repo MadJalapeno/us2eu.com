@@ -1,9 +1,9 @@
 // _data/site.js
 module.exports = {
   title: "Our European Adventure - Moving from USA to Europe",
-  name: "Our European Dreams", 
+  name: "The Great Escape", 
   tagline: "Moving to Europe",
-  description: "Follow our personal journey moving from the USA to Europe. Real experiences, honest mistakes, research we wish we'd found earlier, and everything we're learning along the way.",
+  description: "Follow our personal journey thinking of moving from the USA to Europe. Real experiences, honest mistakes, research we wish we'd found earlier, and everything we're learning along the way.",
   keywords: "moving to Europe, American expat journey, personal relocation story, Europe move blog, expat life",
   author: "Mike",
   url: process.env.URL || "https://us2eu.com",

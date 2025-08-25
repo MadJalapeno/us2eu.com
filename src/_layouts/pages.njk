@@ -13,9 +13,10 @@
   </section>
 
   <section id="next" class="mx-auto px-6">
+    <div class="flex justify-center items-center">
 {% if previous %}
     <a href="{{ previous }}">
-      <button class="btn">
+      <button class="btn btn-soft btn-primary w-32 mr-4">
         Previous 
       </button>
     </a>
@@ -23,13 +24,13 @@
 
 {% if next %}
     <a href="{{ next }}">
-      <button class="btn">
+      <button class="btn w-32 btn-soft btn-primary">
         Next 
       </button>
     </a>
 {% endif %}
   </section>
-
+</div>
 {% include "footer.njk" %}
 
 </body>
