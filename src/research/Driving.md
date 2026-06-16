@@ -4,11 +4,34 @@ tags:
   - greatescape
 us2eu-share: true
 ---
-France recognizes NH driving licences and will transfer it
+France recognizes NH driving licenses (along with 17 other states), and will transfer them
 
 https://us.diplomatie.gouv.fr/en
 
 https://corporateimmigrationpartners.com/france-us-drivers-license-recognized-from-18-states/
+
+The full list of states is:
+
+- Arkansas
+- Colorado
+- Connecticut
+- Delaware
+- Florida
+- Illinois
+- Iowa
+- Massachusetts
+- Maryland
+- Michigan
+- New Hampshire
+- Ohio
+- Oklahoma
+- Pennsylvania
+- South Carolina
+- Texas
+- Virginia
+- Wisconsin
+
+Eligible US citizens must file an online exchange within the first 12 months of their arrival in France.
 
 ~~Need to get a French driving license https://ants.gouv.fr/~~
 

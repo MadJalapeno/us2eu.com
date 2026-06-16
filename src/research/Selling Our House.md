@@ -8,8 +8,9 @@ tags:
   - research
 us2eu-share: true
 layout: pages.njk
+permalink: /research/selling-our-house/
 ---
-A conversation with [ClaudeAI](http://claudeai.com):
+A conversation with [ClaudeAI](https://claudeai.com):
 
 > What is the best way to sell our house in Exeter, NH so it's as easy as possible and we maximize the amount of money we keep.
 

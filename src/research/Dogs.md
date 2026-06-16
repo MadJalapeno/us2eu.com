@@ -6,11 +6,10 @@ tags:
   - france
 layout: pages.njk
 title: Flying with Dogs
+permalink: /research/dogs/
 us2eu-share: true
-11ty-path: /src/research/dogs.md
 ---
-
-#greatescape #penny 
+Chat with [ClaudeAI](https://claudeai.com) about how we can get our dog to France
 
 > We have a dog that we want to take with us to France. How do we make that as easy as possible? She would not be good in the hold, but she is crate trained.
 
@@ -257,4 +256,6 @@ Given your $800k budget for the move, this might be worth considering if your do
 
 **Next Step:** I'd recommend getting quotes from K9 Jets and similar services. Even if you decide it's too expensive, you'll have a baseline to compare against commercial options.
 
-Would you like me to help you think through the cost-benefit analysis of charter vs commercial options?
+Other companies:
+
+Vicuna Air or Retrieve Air.
