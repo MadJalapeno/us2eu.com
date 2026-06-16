@@ -9,6 +9,7 @@ us2eu-share: true
 date: 2025-08-19
 author: John
 ---
+## A chat with ClaudeAI about Visas
 
 
 > We have dual citizenship - American and UK - please explain the options for visas to live and work in France and Portugal, and suggest the best option for us.
