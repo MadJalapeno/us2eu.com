@@ -9,7 +9,22 @@ module.exports = function(eleventyConfig) {
     return words.slice(0, 30).join(" ") + (words.length > 30 ? "..." : "");
   });
 
-  // Date formatting filter
+  // Date formatting filters
+
+
+  eleventyConfig.addFilter("dateFilter", (date, format = "MMMM dd, yyyy") => {
+  const dateObj = new Date(date);
+  const options = {};
+  if (format.includes("MMMM")) options.month = "long";
+  else if (format.includes("MMM")) options.month = "short";
+  else if (format.includes("MM")) options.month = "2-digit";
+  if (format.includes("dd")) options.day = "2-digit";
+  else if (format.includes("d")) options.day = "numeric";
+  if (format.includes("yyyy")) options.year = "numeric";
+  else if (format.includes("yy")) options.year = "2-digit";
+  return dateObj.toLocaleDateString('en-US', options);
+  });
+
   eleventyConfig.addFilter("date", (date, format = "MMMM dd, yyyy") => {
     const dateObj = new Date(date);
     
