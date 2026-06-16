@@ -4,7 +4,7 @@ tags:
   - france
   - portugal
   - visas
-permalink: /research/general-visa-information
+permalink: /research/general-visa-information/
 us2eu-share: true
 date: 2025-08-19
 author: John
