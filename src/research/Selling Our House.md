@@ -1,13 +1,15 @@
 ---
 title: Selling Our House
-created at: Wednesday, ‎September ‎3, ‎2025
+created at: 2025-09-03
 tags:
   - france
   - selling
   - ClaudeAI
+  - research
 us2eu-share: true
+layout: pages.njk
 ---
-
+A conversation with [ClaudeAI](http://claudeai.com):
 
 > What is the best way to sell our house in Exeter, NH so it's as easy as possible and we maximize the amount of money we keep.
 
