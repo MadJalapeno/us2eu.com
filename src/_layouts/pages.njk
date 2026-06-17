@@ -55,6 +55,19 @@
                 </div>
               </div>
               {% endif %}
+
+              <!-- AI Disclaimer -->
+              {% if "ClaudeAI" in tags %}
+              <div class="pt-2 mt-2 border-t border-base-300">
+                <div class="flex gap-2 text-xs text-base-content/60">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <p>This page contains content generated with the assistance of Claude AI. Always verify important information with official sources.</p>
+                </div>
+              </div>
+              {% endif %}
+
             </div>
           </div>
         </div>
@@ -81,6 +94,46 @@
 {% endif %}
   </section>
 </div>
+<!-- Image lightbox modal -->
+<dialog id="image-modal" class="modal">
+  <div class="modal-box max-w-5xl p-4">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <img id="modal-image" src="" alt="" class="w-full h-auto rounded-lg">
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+
+    document.querySelectorAll('.prose img').forEach(function (img) {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function () {
+        let fullSrc = img.src;
+        // Prefer the largest entry from the first <source> in a <picture> element
+        const picture = img.closest('picture');
+        if (picture) {
+          const source = picture.querySelector('source');
+          if (source && source.srcset) {
+            const largest = source.srcset.split(',').map(s => s.trim()).pop();
+            const url = largest.split(' ')[0];
+            if (url) fullSrc = url;
+          }
+        }
+        modalImg.src = fullSrc;
+        modalImg.alt = img.alt || '';
+        modal.showModal();
+      });
+    });
+  });
+</script>
+
 {% include "footer.njk" %}
 
 </body>
