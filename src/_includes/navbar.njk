@@ -1,5 +1,5 @@
 
-<div class="navbar bg-base-100 sticky top-0 z-50 border-b border-base-content/10">
+<div class="navbar bg-base-100 sticky top-0 z-50 border-b border-base-content/10 px-4 lg:px-8">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost btn-circle lg:hidden">
@@ -23,8 +23,8 @@
         </div>
     </div>
 
-    <div class="navbar-end hidden lg:flex items-center gap-4">
-        <ul class="menu menu-horizontal px-1 gap-1">
+    <div class="navbar-end hidden lg:flex items-center gap-6">
+        <ul class="menu menu-horizontal px-1 gap-2">
             {% for item in navigation.main %}
             <li>
                 <a href="{{ item.url }}"
@@ -34,6 +34,6 @@
             </li>
             {% endfor %}
         </ul>
-        <a href="mailto:hello@us2eu.com" class="btn btn-sm btn-outline ml-2">Say Hi</a>
+        <a href="mailto:hello@us2eu.com" class="btn btn-sm btn-outline">Say Hi</a>
     </div>
 </div>
