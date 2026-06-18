@@ -15,9 +15,28 @@
     {% if image %}<meta property="og:image" content="{{ site.url }}{{ image }}">{% endif %}
 
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    
+
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
-    
+
+    <style>
+      .hero-gradient {
+        background: linear-gradient(to right, #f0f6ff 0%, #ffffff 50%, #fff0f0 100%);
+      }
+      [data-theme="dark"] .hero-gradient {
+        background: linear-gradient(to right, #1e3a5f 0%, #1f2937 50%, #3f1f2e 100%);
+      }
+    </style>
+
+    <script>
+        // Load saved theme preference or use system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     {% if schema %}
     <script type="application/ld+json">
     {{ schema | dump | safe }}

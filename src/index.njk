@@ -9,12 +9,12 @@ hero:
   avatar: /assets/images/profile.jpg
   buttons:
     - text: "Follow Our Journey"
-      class: ""
-      extraClass: "shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 animate-pulse"
+      class: "btn-primary"
+      extraClass: ""
       url: /#updates
-    - text: "Browse Our Research" 
+    - text: "Browse Our Research"
       class: "btn-outline"
-      extraClass: "hover:btn-rouge-100 transition-all duration-300"
+      extraClass: ""
       url: /research
 
 status:
@@ -37,50 +37,6 @@ status:
       value: "Research"
       color: "info"
       description: "📚 Deep dive mode"
-
-research:
-  title: "What we've learned so far"
-  subtitle: "Sharing all our research because we wish we'd found something like this when we started"
-  items:
-    - title: "Visa Options Deep Dive"
-      icon: "📋"
-      color: "blue"
-      lastUpdated: "Last updated 3 days ago"
-      status:
-        type: "success"
-        text: "Complete"
-      description: "We mapped out every possible visa route for 12 different European countries. Turns out there are way more options than we thought, but also way more complexity..."
-      badges:
-        - "📊 15 pages of notes"
-        - "🕒 40 hours research"
-      link: "/research/visas/"
-      buttonText: "Read findings"
-    - title: "Real Cost Breakdown"
-      icon: "💰"
-      color: "green"
-      lastUpdated: "Updated weekly"
-      status:
-        type: "warning"
-        text: "Ongoing"
-      description: "We're tracking every single cost - from visa fees to moving expenses to cost of living comparisons. Some surprises: it's cheaper than we thought in some places, way more expensive in others."
-      badges:
-        - "📈 8 cities compared"
-        - "💸 Cost estimates"
-      link: "/research/costs/"
-      buttonText: "See numbers"
-    - title: "Housing Reality Check"
-      icon: "🏠"
-      color: "purple"
-      lastUpdated: "Work in progress"
-      status:
-        type: "info"
-        text: "Research Phase"
-      description: "Turns out finding an apartment as foreigners is... complicated. We're documenting all the rental websites, requirements, and tricks we're learning from people who've done it."
-      badges:
-        - "🔍 50+ sites reviewed"
-        - "📞 12 interviews"
-      link: "/research/housing/"
-      buttonText: "Current progress"
 
 timeline:
   title: "Recent updates from our journey"
@@ -114,6 +70,6 @@ schema:
 
 {% include "story.njk" %}
 
-{% include "research-grid.njk" %}
+{% include "research-dynamic.njk" %}
 
 {% include "updates.njk" %}

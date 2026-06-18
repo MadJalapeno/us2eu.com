@@ -22,30 +22,30 @@ https://dequeuniversity.com/rules/axe/4.10/color-contrast
 }
 
 @theme {
-  --color-bleu-100: oklch(0.2968 0.205674 264.052);
-  --color-bleu-90: oklch(0.2968 0.205674 264.052 / 90%);
-  --color-bleu-80: oklch(0.2968 0.205674 264.052 / 80%);
-  --color-bleu-70: oklch(0.2968 0.205674 264.052 / 70%);
-  --color-bleu-60: oklch(0.2968 0.205674 264.052 / 60%);
-  --color-bleu-50: oklch(0.2968 0.205674 264.052 / 50%);
-  --color-bleu-40: oklch(0.2968 0.205674 264.052 / 40%);
-  --color-bleu-30: oklch(0.2968 0.205674 264.052 / 30%);
-  --color-bleu-20: oklch(0.2968 0.205674 264.052 / 20%);
-  --color-bleu-10: oklch(0.2968 0.205674 264.052 / 10%);
-  --color-bleu-05: oklch(0.2968 0.205674 264.052 / 05%);
+  --color-ink-100: oklch(0.13 0.01 264);
+  --color-ink-90: oklch(0.13 0.01 264 / 90%);
+  --color-ink-80: oklch(0.13 0.01 264 / 80%);
+  --color-ink-70: oklch(0.13 0.01 264 / 70%);
+  --color-ink-60: oklch(0.13 0.01 264 / 60%);
+  --color-ink-50: oklch(0.13 0.01 264 / 50%);
+  --color-ink-40: oklch(0.13 0.01 264 / 40%);
+  --color-ink-30: oklch(0.13 0.01 264 / 30%);
+  --color-ink-20: oklch(0.13 0.01 264 / 20%);
+  --color-ink-10: oklch(0.13 0.01 264 / 10%);
+  --color-ink-05: oklch(0.13 0.01 264 / 05%);
 
 
-  --color-rouge-100: oklch(0.5718 0.233764 28.0921);
-  --color-rouge-90: oklch(0.5718 0.233764 28.0921 / 90%);
-  --color-rouge-80: oklch(0.5718 0.233764 28.0921 / 80%);
-  --color-rouge-70: oklch(0.5718 0.233764 28.0921 / 70%);
-  --color-rouge-60: oklch(0.5718 0.233764 28.0921 / 60%);
-  --color-rouge-50: oklch(0.5718 0.233764 28.0921 / 50%);
-  --color-rouge-40: oklch(0.5718 0.233764 28.0921 / 40%);
-  --color-rouge-30: oklch(0.5718 0.233764 28.0921 / 30%);
-  --color-rouge-20: oklch(0.5718 0.233764 28.0921 / 20%);
-  --color-rouge-10: oklch(0.5718 0.233764 28.0921 / 10%);
-  --color-rouge-05: oklch(0.5718 0.233764 28.0921 / 05%);
+  --color-accent-100: oklch(0.50 0.18 264);
+  --color-accent-90: oklch(0.50 0.18 264 / 90%);
+  --color-accent-80: oklch(0.50 0.18 264 / 80%);
+  --color-accent-70: oklch(0.50 0.18 264 / 70%);
+  --color-accent-60: oklch(0.50 0.18 264 / 60%);
+  --color-accent-50: oklch(0.50 0.18 264 / 50%);
+  --color-accent-40: oklch(0.50 0.18 264 / 40%);
+  --color-accent-30: oklch(0.50 0.18 264 / 30%);
+  --color-accent-20: oklch(0.50 0.18 264 / 20%);
+  --color-accent-10: oklch(0.50 0.18 264 / 10%);
+  --color-accent-05: oklch(0.50 0.18 264 / 05%);
 
 
 }

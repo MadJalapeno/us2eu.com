@@ -1,0 +1,72 @@
+---
+layout: base.njk
+title: All Tags
+permalink: /tags/
+---
+
+<section class="py-16 hero-gradient">
+  <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-base-content/40 mb-4">Browse</p>
+      <h1 class="text-5xl font-bold mb-6">All Tags</h1>
+      <p class="text-lg text-base-content/70">Explore all topics covered in our research</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-base-100">
+  <div class="container mx-auto px-6">
+    <div class="max-w-3xl mx-auto">
+      <!-- Tag Cloud with centered popular tags -->
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        {% set maxCount = collections.tagCloud[0].count %}
+        {% set filteredTags = [] %}
+        {% for item in collections.tagCloud %}
+          {% if item.tag != "all" and item.tag != "nav" and item.tag != "post" and item.tag != "posts" and item.tag != "greatescape" %}
+            {% set filteredTags = filteredTags.concat([item]) %}
+          {% endif %}
+        {% endfor %}
+
+        {% set tagCount = filteredTags.length %}
+        {% set midpoint = (tagCount / 2) | round | int %}
+
+        {# Display tags in alternating order: middle first, then left, then right #}
+        {% for i in range(0, midpoint) %}
+          {% set item = filteredTags[midpoint - i - 1] %}
+          {% if item.count / maxCount >= 0.8 %}
+            {% set padding = "px-5 py-3" %}
+          {% elif item.count / maxCount >= 0.6 %}
+            {% set padding = "px-4 py-2.5" %}
+          {% elif item.count / maxCount >= 0.4 %}
+            {% set padding = "px-3 py-2" %}
+          {% else %}
+            {% set padding = "px-2 py-1.5" %}
+          {% endif %}
+          <a href="/tags/{{ item.tag | slug }}/"
+             class="badge badge-outline hover:bg-base-content hover:text-base-100 transition-all {{ item.count | tagSize(maxCount) }} {{ item.count | tagWeight(maxCount) }} {{ item.count | tagOpacity(maxCount) }} {{ padding }}"
+             title="{{ item.count }} post{{ 's' if item.count != 1 else '' }}">
+            {{ item.tag }}
+          </a>
+        {% endfor %}
+
+        {% for i in range(midpoint, tagCount) %}
+          {% set item = filteredTags[i] %}
+          {% if item.count / maxCount >= 0.8 %}
+            {% set padding = "px-5 py-3" %}
+          {% elif item.count / maxCount >= 0.6 %}
+            {% set padding = "px-4 py-2.5" %}
+          {% elif item.count / maxCount >= 0.4 %}
+            {% set padding = "px-3 py-2" %}
+          {% else %}
+            {% set padding = "px-2 py-1.5" %}
+          {% endif %}
+          <a href="/tags/{{ item.tag | slug }}/"
+             class="badge badge-outline hover:bg-base-content hover:text-base-100 transition-all {{ item.count | tagSize(maxCount) }} {{ item.count | tagWeight(maxCount) }} {{ item.count | tagOpacity(maxCount) }} {{ padding }}"
+             title="{{ item.count }} post{{ 's' if item.count != 1 else '' }}">
+            {{ item.tag }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

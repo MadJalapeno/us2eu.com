@@ -36,7 +36,7 @@ module.exports = function (eleventyConfig) {
   // read data from .env file to determine dev or prod
   eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV);
 
-  
+
 
   // Plug Ins
   eleventyConfig.addPlugin(eleventyImageTransformPlugin,{
@@ -45,11 +45,19 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(timeToRead);
-  
+
+  // Add a collection for latest research (for homepage)
+  eleventyConfig.addCollection("latestResearch", (collectionApi) => {
+    return collectionApi
+      .getFilteredByTag("research")
+      .reverse()
+      .slice(0, 3);
+  });
+
   let markdownLibrary = markdownIt({
     html: true,
   });
-  
+
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Load modular configurations

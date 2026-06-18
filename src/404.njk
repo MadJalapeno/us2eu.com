@@ -3,18 +3,24 @@ title: Oops! Not Found
 permalink: 404.html
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{{ title }}</title>
-	</head>
-	<body>
-		<h1>{{ title }}</h1>
-		<p>
-			This is where you should tell the user how to find their content. Maybe on
-			the <a href="/">home page?</a>
-		</p>
-	</body>
+{% include "head.njk" %}
+
+<body class="min-h-screen flex flex-col">
+{% include "navbar.njk" %}
+
+<section class="flex-1 py-20 hero-gradient">
+  <div class="container mx-auto px-6 h-full flex items-center justify-center">
+    <div class="text-center max-w-md">
+      <p class="text-sm font-semibold uppercase tracking-widest text-base-content/40 mb-4">Error 404</p>
+      <h1 class="text-6xl font-bold mb-4">Page not found</h1>
+      <p class="text-lg text-base-content/70 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+      <a href="/" class="btn btn-outline">Back to home</a>
+    </div>
+  </div>
+</section>
+
+{% include "footer.njk" %}
+
+</body>
+
 </html>

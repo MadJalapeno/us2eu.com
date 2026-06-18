@@ -5,26 +5,28 @@ pagination:
   data: collections.research
   size: 5
   alias: posts
+  reverse: true
 ---
 
-<section class="py-16 bg-base-200">
+<section class="py-16 hero-gradient">
   <div class="container mx-auto px-6 text-center">
-    <h1 class="text-4xl font-bold mb-3">Our Research</h1>
+    <p class="text-sm font-semibold uppercase tracking-widest text-base-content/40 mb-4">Comprehensive Guides</p>
+    <h1 class="text-5xl font-bold mb-6">Our Research</h1>
     <p class="text-base-content/60 text-lg max-w-2xl mx-auto">Everything we've looked into on our journey towards moving to Europe.</p>
   </div>
 </section>
 
-<section id="toc" class="py-16 bg-base-200">
+<section id="toc" class="py-16 bg-base-100">
   <div class="container mx-auto px-6">
     <div class="max-w-4xl mx-auto flex flex-col gap-5">
 
       {%- for post in pagination.items %}
-      <div class="card bg-base-100 shadow-md border border-base-300 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 relative [&:hover_h2]:text-primary">
+      <div class="card bg-gradient-to-br from-base-100 to-base-200/20 border border-base-content/10 hover:border-base-content/30 transition-colors relative [&:hover_h2]:text-base-content">
         <div class="card-body gap-3">
 
           <div class="flex items-start justify-between gap-4">
             <div>
-              <h2 class="card-title text-xl transition-colors leading-snug">
+              <h2 class="card-title text-2xl transition-colors leading-snug">
                 <a href="{{ post.url }}" class="after:absolute after:inset-0">{{ post.data.title }}</a>
               </h2>
               {% if post.data.date %}
@@ -39,13 +41,13 @@ pagination:
             </span>
           </div>
 
-          <p class="text-base-content/65 text-base leading-relaxed">{{ post.content | excerpt }}</p>
+          <p class="text-base-content/65 text-lg leading-relaxed">{{ post.content | excerpt }}</p>
 
           {% if post.data.tags %}
           <div class="relative z-10 flex flex-wrap items-center gap-2 pt-1">
             {% for tag in post.data.tags %}
               {% if tag != "all" and tag != "research" and tag != "greatescape" %}
-                <a href="/tags/{{ tag | slug }}/" class="badge badge-outline badge-sm hover:badge-primary transition-colors">{{ tag }}</a>
+                <a href="/tags/{{ tag | slug }}/" class="badge badge-outline badge-sm hover:bg-base-content hover:text-base-100 transition-colors">{{ tag }}</a>
               {% endif %}
             {% endfor %}
           </div>

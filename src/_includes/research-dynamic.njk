@@ -1,0 +1,49 @@
+<!--
+# _includes/research-dynamic.njk
+Dynamic research section that pulls from collections.research
+-->
+
+<section id="research" class="py-20 bg-base-200/40 dark:bg-base-content/5">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-sm font-semibold uppercase tracking-widest text-base-content/40 mb-4">Comprehensive Guides</p>
+            <h2 class="text-5xl font-bold mb-8">What we've learned so far</h2>
+            <p class="text-xl text-base-content/70">Sharing all our research because we wish we'd found something like this when we started</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto space-y-6">
+            {% for post in collections.latestResearch %}
+            <div class="card bg-base-100 border border-base-content/10 hover:border-base-content/30 transition-colors">
+                <div class="card-body p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-4xl">📄</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-base-content">{{ post.data.title }}</h3>
+                                <div class="text-sm text-base-content/60 font-medium">Updated {{ post.date | dateFilter }}</div>
+                            </div>
+                        </div>
+                        <div class="badge badge-outline text-xs font-semibold px-3 py-2">Research</div>
+                    </div>
+                    <p class="text-base mb-4 leading-relaxed">
+                        {{ post.content | excerpt | safe }}
+                    </p>
+                    <div class="card-actions justify-between items-center">
+                        <div class="flex gap-2 flex-wrap">
+                            {% for tag in post.data.tags %}
+                                {% if tag != "all" and tag != "research" and tag != "greatescape" and tag != "posts" %}
+                                <div class="bg-base-200 text-xs px-2 py-1 rounded">{{ tag }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <a href="{{ post.url }}" class="btn btn-xs btn-outline">Read more</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="text-center mt-8">
+                <a href="/research" class="btn btn-outline">View all research</a>
+            </div>
+        </div>
+    </div>
+</section>

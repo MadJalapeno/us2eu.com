@@ -8,8 +8,9 @@ layout: pages.njk
 title: Flying with Dogs
 permalink: /research/dogs/
 us2eu-share: true
+date: 2025-08-19
 ---
-Chat with [ClaudeAI](https://claudeai.com) about how we can get our dog to France
+Chat with [ClaudeAI](https://claudeai.com) about how we can get our dog to France.
 
 > We have a dog that we want to take with us to France. How do we make that as easy as possible? She would not be good in the hold, but she is crate trained.
 

@@ -1,28 +1,27 @@
 <!--
 /src/_includes/hero.njk
 -->
-<section class="hero min-h-[80vh] relative overflow-hidden bg-white">
-    <div class="hero-overlay bg-gradient-to-b from-white to-bleu-50 dark:from-bleu-50 dark:to-black"></div>
-    <div class="hero-content text-center max-w-6xl relative z-10">
-        <div class="max-w-4xl">
-            <div class="avatar mb-8 animate-float">
-                <div class="w-50">
-                    <div class="mask mask-hexagon w-50 border-2">
-                        <img src="{{ hero.avatar }}" alt=""/>
-                    </div>
-                   
+<section class="hero hero-gradient min-h-[70vh] relative overflow-hidden">
+    <div class="hero-content max-w-6xl w-full relative z-10 flex-row gap-12 py-20">
+        <div class="flex-1 flex items-center justify-center">
+            <div class="avatar w-full max-w-sm">
+                <div class="w-full rounded-2xl grayscale border border-base-content/10 overflow-hidden">
+                    <img src="{{ hero.avatar }}" alt=""/>
                 </div>
             </div>
-            <h1 class="text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+        </div>
+        <div class="flex-1 text-left">
+            <p class="text-sm font-semibold uppercase tracking-widest text-base-content/40 mb-4">Personal Journey</p>
+            <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 {{ hero.title | safe }}
             </h1>
-            <p class="text-2xl lg:text-3xl max-w-4xl mb-12 leading-relaxed text-base-content/80 font-light">
+            <p class="text-xl lg:text-2xl max-w-2xl mb-10 leading-relaxed text-base-content/70 font-light">
                 {{ hero.subtitle }}
             </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4">
                 {% for button in hero.buttons %}
                 <a href="{{ button.url }}">
-                    <button class="btn {{ button.class }} btn-lg text-lg px-10 {{ button.extraClass }}">
+                    <button class="btn {{ button.class }} btn-md text-base px-8">
                         {{ button.text }}
                     </button>
                 </a>
