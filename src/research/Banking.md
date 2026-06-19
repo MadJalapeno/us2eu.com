@@ -3,7 +3,7 @@ tags:
   - finance
   - france
   - banking
-permalink: /research/banking-and-moving-money-internationally
+permalink: /research/banking-and-moving-money-internationally/
 title: Moving Money Internationally and Banking
 us2eu-share: true
 date: 2026-03-12
