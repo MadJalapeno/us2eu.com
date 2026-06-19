@@ -4,11 +4,10 @@ tags:
   - france
   - property
 us2eu-share: true
-11ty-path: /src/research/
 11ty-filename: estate_agents.md
 date: 2026-06-16
 title: List of French Estate Agents
-permalink: /research/french-estate-agents
+permalink: /research/french-estate-agents/
 ---
 List of Estate Agents for France that we have discovered so far.
 
