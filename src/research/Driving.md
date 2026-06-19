@@ -6,7 +6,7 @@ tags:
 us2eu-share: true
 title: US Driving License in France
 date: 2025-08-25
-permalink: /research/us-driving-license-france
+permalink: /research/us-driving-license-france/
 author: John
 layout: pages.njk
 ---
