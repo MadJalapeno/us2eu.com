@@ -4,7 +4,9 @@ tags:
   - uk
   - france
 us2eu-share: true
-title: Pro/Cons of Moving
+title: Pro/Cons of Moving Internationally
+date: 2025-08-22
+permalink: /research/pros-cons-of-different-countries-to-move-to/
 ---
 
 #### USA
@@ -45,7 +47,7 @@ Weighting everything from -5 (very bad and important) to 0 (Neutral) to +5 (very
 | Cost of Living        | 2    | 0    | 4      | Food + Taxes + Heating                          |
 | Moving Costs          | 3    | 1    | 0      | Cost to move there                              |
 | Politics              | -2   | 1    | 3      | How bat shit                                    |
-| [Climate](./climate/Climate.md.md#) | 3    | 1    | 2      | How hot in summer/cold in winter                |
+| [Climate](./Climate.md#) | 3    | 1    | 2      | How hot in summer/cold in winter                |
 | Need Visas            | 0    | 0    | -2     | How easy to work there for a year               |
 | Employment            | 3    | 3    | 1      | How easy to find a job in ESG or Design         |
 | Retirement            | 0    | 2    | 5      | Would we want to retire there?                  |
