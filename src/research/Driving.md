@@ -2,7 +2,13 @@
 tags:
   - france
   - greatescape
+  - driving
 us2eu-share: true
+title: US Driving License in France
+date: 2025-08-25
+permalink: /research/us-driving-license-france
+author: John
+layout: pages.njk
 ---
 France recognizes NH driving licenses (along with 17 other states), and will transfer them
 
