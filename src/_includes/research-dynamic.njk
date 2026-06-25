@@ -12,35 +12,42 @@ Dynamic research section that pulls from collections.research
         </div>
 
         <div class="max-w-6xl mx-auto space-y-6">
-            {% for post in collections.latestResearch %}
-            <div class="card bg-base-100 border border-base-content/10 hover:border-base-content/30 transition-colors">
-                <div class="card-body p-6">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="text-4xl">📄</div>
-                            <div>
-                                <h3 class="text-2xl font-bold text-base-content">{{ post.data.title }}</h3>
-                                <div class="text-sm text-base-content/60 font-medium">Updated {{ post.date | dateFilter }}</div>
-                            </div>
+            {%- for post in collections.latestResearch %}
+            <div class="card bg-gradient-to-br from-base-100 to-base-200/20 border border-base-content/10 hover:border-base-content/30 transition-colors relative [&:hover_h2]:text-base-content">
+                <div class="card-body gap-3">
+
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h2 class="card-title text-2xl transition-colors leading-snug">
+                                <a href="{{ post.url }}" class="after:absolute after:inset-0">{{ post.data.title }}</a>
+                            </h2>
+                            {% if post.date %}
+                                <span class="text-xs text-base-content/40">{{ post.date | dateFilter }}</span>
+                            {% endif %}
                         </div>
-                        <div class="badge badge-outline text-xs font-semibold px-3 py-2">Research</div>
+                        <span class="flex items-center gap-1.5 text-sm text-base-content/50 whitespace-nowrap flex-shrink-0 min-w-[6rem] justify-end mt-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            {{ post.content | readingTime }} min read
+                        </span>
                     </div>
-                    <p class="text-base mb-4 leading-relaxed">
-                        {{ post.content | excerpt | safe }}
-                    </p>
-                    <div class="card-actions justify-between items-center">
-                        <div class="flex gap-2 flex-wrap">
-                            {% for tag in post.data.tags %}
-                                {% if tag != "all" and tag != "research" and tag != "greatescape" and tag != "posts" %}
-                                <div class="bg-base-200 text-xs px-2 py-1 rounded">{{ tag }}</div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                        <a href="{{ post.url }}" class="btn btn-xs btn-outline">Read more</a>
+
+                    <p class="text-base-content/65 text-lg leading-relaxed">{{ post.content | excerpt }}</p>
+
+                    {% if post.data.tags %}
+                    <div class="relative z-10 flex flex-wrap items-center gap-2 pt-1">
+                        {% for tag in post.data.tags %}
+                            {% if tag != "all" and tag != "research" and tag != "greatescape" and tag != "posts" %}
+                            <a href="/tags/{{ tag | slug }}/" class="badge badge-outline badge-sm hover:bg-base-content hover:text-base-100 transition-colors">{{ tag }}</a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
+                    {% endif %}
+
                 </div>
             </div>
-            {% endfor %}
+            {%- endfor %}
             <div class="text-center mt-8">
                 <a href="/research" class="btn btn-outline">View all research</a>
             </div>
